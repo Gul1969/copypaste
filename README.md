@@ -25,3 +25,8 @@ IP_ADDRESS_2
 ansible_user=USER
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 ansible_ssh_private_key_file=~/.ssh/ansible_id_rsa
+
+- hosts: test
+  tasks:
+  - name: "Ping"
+    ping:
