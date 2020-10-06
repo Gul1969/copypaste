@@ -30,3 +30,23 @@ ansible_ssh_private_key_file=~/.ssh/ansible_id_rsa
   tasks:
   - name: "Ping"
     ping:
+    
+    
+    events {}
+http {
+    server {
+        root {{install_directory}};
+        index index.html;
+        include /etc/nginx/mime.types; 
+        proxy_read_timeout  90;
+        proxy_set_header X-Forwarded-Host $host:$server_port;
+        proxy_set_header X-Forwarded-Server $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Real-IP $remote_addr;
+
+        location / {
+            try_files $uri /index.html;
+        }
+    }
+}
