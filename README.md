@@ -24,3 +24,8 @@ sonar-scanner \
   -Dsonar.sources=. \
   -Dsonar.host.url=http://localhost:9000 \
   -Dsonar.login=2b015a98b7b5898c48974457a9e1f88027a4f232
+
+
+
+
+https://gitlab.com/qacdevops/flask-stages/-/blob/master/sonar-project.properties
