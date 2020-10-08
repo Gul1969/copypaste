@@ -33,3 +33,11 @@ https://gitlab.com/qacdevops/flask-stages/-/blob/master/sonar-project.properties
 
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
+
+git clone https://gitlab.com/qacdevops/chaperootodo_client chaperoo && cd $_
+
+export DB_PASSWORD=[enter your own password here]
+
+docker-compose pull && docker-compose up -d
+
+docker run -d --name zap -u zap -p 8080:8080 -p 8090:8090 -i owasp/zap2docker-stable zap-webswing.sh
