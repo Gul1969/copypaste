@@ -3,6 +3,7 @@ docker run -d -p 9000:9000 --name sonarqube --network sonarqube-tutorial sonarqu
 docker run -d -p 8080:8080 -- name jenkins --network sonarqube-tutorial jenkins/jenkins
 
 must be unique in a given SonarQube instance
+
 sonar.projectKey=first-project
 
 --- optional properties ---
