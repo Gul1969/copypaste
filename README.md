@@ -1,3 +1,5 @@
+# SAST Testing
+
 docker network create sonarqube-tutorial
 sudo docker run -d -p 9000:9000 --name sonarqube --network sonarqube-tutorial sonarqube
 sudo docker run -d -p 8080:8080 -- name jenkins --network sonarqube-tutorial jenkins/jenkins
@@ -91,6 +93,7 @@ EOF
 
 
 
+# Use ansible to install Docker
 
 - hosts: 127.0.0.1
   connection: local
@@ -127,6 +130,7 @@ EOF
       update_cache: yes
 
 
+# Install docker on VM
 
 curl https://get.docker.com | sudo bash
 
