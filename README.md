@@ -124,3 +124,10 @@ EOF
     apt:
       name: "docker-ce"
       update_cache: yes
+
+
+
+curl https://get.docker.com | sudo bash
+
+sudo usermod -aG docker $(whoami)
+
