@@ -91,7 +91,9 @@ done
 echo "initial admin password: \$(cat .jenkins/secrets/initialAdminPassword)"
 EOF
 
+# or:
 
+Git clone https://github.com/bob-crutchley/installers.git
 
 # Use ansible to install Docker
 
