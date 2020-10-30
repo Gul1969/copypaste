@@ -142,3 +142,8 @@ E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to cor
 
  Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
  
+ sudo apt-get -f install 
+ sudo apt-get update
+ sudo dpkg --configure -a
+sudo apt-get clean
+
