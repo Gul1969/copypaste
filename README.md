@@ -138,5 +138,6 @@ curl https://get.docker.com | sudo bash
 
 sudo usermod -aG docker $(whoami)
 
+E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem. 
 
 
