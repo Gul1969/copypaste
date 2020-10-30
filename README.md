@@ -138,12 +138,11 @@ curl https://get.docker.com | sudo bash
 
 sudo usermod -aG docker $(whoami)
 
-E: dpkg was interrupted, you must manually run 'sudo dpkg --configure -a' to correct the problem. 
-
- Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
- 
- sudo apt-get -f install 
- sudo apt-get update
- sudo dpkg --configure -a
-sudo apt-get clean
+Git clone https://github.com/bob-crutchley/installers.git
+Cd installers
+Cd linux
+Install curl: sudo apt install curl
+Run script: ./Jenkins-systemd.sh
+Copy and past the initial password in localhost:8080
+Install suggested plugins
 
