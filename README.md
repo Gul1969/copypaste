@@ -146,7 +146,20 @@ Run script: ./Jenkins-systemd.sh
 Copy and past the initial password in localhost:8080
 Install suggested plugins
 
-#install docker-compose
+
+# Install ansible
+# make sure ~/.local/bin exists and is on your PATH
+mkdir -p ~/.local/bin
+echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
+source ~/.bashrc
+## install ansible with pip
+pip install --user ansible
+# check that ansible has been installed
+ansible --version
+
+
+
+# install docker-compose
 # make sure jq & curl is installed
 sudo apt update
 sudo apt install -y curl jq
