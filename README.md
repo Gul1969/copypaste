@@ -169,3 +169,5 @@ version=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | 
 sudo curl -L "https://github.com/docker/compose/releases/download/${version}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 # make the file executable
 sudo chmod +x /usr/local/bin/docker-compose
+
+docker network create sonarqube-tutorial docker run -d -p 9000:9000 --name sonarqube --network sonarqube-tutorial sonarqube docker run -d -p 8080:8080 -- name jenkins --network sonarqube-tutorial jenkins/jenkins
