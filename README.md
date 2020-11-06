@@ -173,4 +173,5 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker network create sonarqube-tutorial docker run -d -p 9000:9000 --name sonarqube --network sonarqube-tutorial sonarqube docker run -d -p 8080:8080 -- name jenkins --network sonarqube-tutorial jenkins/jenkins
 
 docker run -d -p 8081:8081 --name nexus sonatype/nexus3
+
 docker exec nexus cat nexus-data/admin.password
